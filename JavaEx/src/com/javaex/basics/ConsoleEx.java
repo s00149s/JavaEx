@@ -3,6 +3,15 @@ package com.javaex.basics;
 public class ConsoleEx {
 
 	public static void main(String[] args) {
+		consoleOutputEx();
+	}
+	
+	private static void consoleOutputEx() {
+		//	콘솔 출력
+		//	System.out -> 표준 출력
+		//	System.err -> 표준 에러
+		
+		
 		//	print 메서드 -> 출력 후 개행 안함
 		//	println 메서드 -> 출력 후 개행 함
 		//	printf 메서드 -> 형식화된 출력 -> TODO: 뒤쪽 String 항목에서 정리
