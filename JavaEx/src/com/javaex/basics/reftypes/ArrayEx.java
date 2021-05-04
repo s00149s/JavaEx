@@ -4,9 +4,9 @@ public class ArrayEx {
 
 	public static void main(String[] args) {
 //		arrayBasic();
-//		multiDimArray();
+		multiDimArray();
 //		arrayCopyFor();
-		arrayCopySystem();
+//		arrayCopySystem();
 	}
 	
 	private static void arrayCopySystem() {
