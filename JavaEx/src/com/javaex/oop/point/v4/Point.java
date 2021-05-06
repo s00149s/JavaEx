@@ -1,11 +1,12 @@
-package com.javaex.oop.point.v3;
+package com.javaex.oop.point.v4;
 
-//	v3. 생성자
+//	v4. 상속
 
 public class Point {
 	//	필드 
-	private int x;
-	private int y;
+	//	상속의 경우 물려줄 필드의 접근 제한자 -> protected
+	protected int x;
+	protected int y;
 	
 	//	생성자
 	public Point(int x, int y) {

@@ -15,6 +15,7 @@ public class StaticEx {
 //	instanceVar = "Instance Member";	//	static -> instance 접근 불가
 		System.out.println("Static Block");
 	}
+	
 	//	생성자 : 인스턴스 초기화
 	public StaticEx() {
 		refCount++;	//	참조 카운트 증가
