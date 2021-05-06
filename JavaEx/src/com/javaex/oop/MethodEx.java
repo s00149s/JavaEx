@@ -10,8 +10,47 @@ public class MethodEx {
 		
 		printDivide(7, 3);
 		printDivide(7, 0);
+		
+		System.out.println(getSumArr(new double[] {
+				1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+		}));
+		
+		System.out.println(getSum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+		printSum("합계: ", 1, 2, 3, 4, 5, 6, 7, 8, 9);
 	}
 	
+	//	고정 인수, 가변 인수 같이 쓸 수 있다
+	//	제약 : 고정 인수를 먼저 선언, 뒤에 가변인수 선언
+	
+	private static void printSum(String message,	//	고정 인수
+			double ...values) {
+		System.out.println(message + ", " + getSum(values));
+	}
+	
+	
+	//	가변 인수 : ...
+	private static double getSum(double ...values) {
+		/*
+		double total = 0;
+		
+		for(double value: values) {
+			total += value;
+		}
+		return total;
+		*/
+		return getSumArr(values);	//	아래 코드와 완벽히 일치하기 때문에 불러와서 리턴해줌
+	}
+	
+	//	매개변수로 배열을 전달
+	private static double getSumArr(double[] values) {
+		//	전달받은 배열의 요소값을 합산해서 반환
+		double total = 0;
+		
+		for (double value: values) {
+			total += value;
+		}
+		return total;
+	}
 	
 	//	return 문을 만나면 메서드 실행을 중단하고 호출한 쪽으로 흐름이 돌아간다
 	private static void printDivide(int num1, int num2) {
@@ -33,6 +72,9 @@ public class MethodEx {
 		//	반환 타입과 일치하는 데이터를 return 해야 한다		
 		return num * num;
 	}
+
+	
+	
 	
 	
 	//	입력이 없고, 반환이 없는 메서드(void)
