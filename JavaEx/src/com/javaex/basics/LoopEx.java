@@ -9,11 +9,11 @@ public class LoopEx {
 //		whileGugu();
 //		whileInfinity();
 //		doWhileEx();
-		randomEx();
+//		randomEx();
 		breakEx();
-		continueEx();
-		forLoopEx();
-		randomEx();
+//		continueEx();
+//		forLoopEx();
+//		randomEx();
 		
 	}
 	private static void randomEx() {
