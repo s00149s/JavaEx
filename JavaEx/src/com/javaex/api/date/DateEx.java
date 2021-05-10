@@ -1,15 +1,67 @@
 package com.javaex.api.date;
 
 import java.text.DateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
 public class DateEx {
 
 	public static void main(String[] args) {
-		dateEx();
-
+//		dateEx();
+		calendarEx();
 	}
+	
+	private static void calendarEx() {
+		//	캘린더 불러오기
+		Calendar now = Calendar.getInstance();
+//		System.out.println("Now : " + now);
+		Calendar custom = Calendar.getInstance();
+		custom.set(1999, 11, 31);	//	1999년 12월 31일 (월 정보는 0부터 시작)
+		
+		//	정보 받아오기 .get(캘린더 상수) 명시
+		System.out.printf("오늘은 %d년 %d월 %d일입니다.%n",
+				now.get(Calendar.YEAR),
+				now.get(Calendar.MONTH) + 1,	//	월은 0부터
+				now.get(Calendar.DATE));
+		
+		Calendar future = Calendar.getInstance();	//	현재 날짜
+		//	100일 뒤로 이동
+		future.add(Calendar.DATE,100);
+		System.out.printf("100일 후 future : %d년 %d월 %d일%n", 
+				future.get(Calendar.YEAR),
+				future.get(Calendar.MONTH) + 1,
+				future.get(Calendar.DATE));
+		//	이 날은 무슨 요일?
+		int dow = future.get(Calendar.DAY_OF_WEEK);
+		System.out.println("100일 후 요일 : " + dow);
+		
+		String dowStr = "?";
+		switch(dow) {
+		case Calendar.SUNDAY:	//	1
+			dowStr = "일요일";
+			break;
+		case Calendar.MONDAY:	//	2
+			dowStr = "월요일";
+			break;
+		case Calendar.TUESDAY:
+			dowStr = "수요일";
+			break;
+		case Calendar.WEDNESDAY:
+			dowStr = "목요일";
+			break;
+		case Calendar.THURSDAY:
+			dowStr = "금요일";
+			break;
+		case Calendar.FRIDAY:
+			dowStr = "토요일";			
+		}
+		//	요일 정보 : SUNDAY(1) ~ SATURDAY(7)
+		System.out.println(dowStr);
+		
+		
+	}
+	
 	
 	private static void dateEx() {
 		//	날짜 얻어오기
