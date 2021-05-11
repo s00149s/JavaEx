@@ -28,6 +28,8 @@ public class FileStreamEx {
 			is.close();
 			
 			System.out.println("파일을 복사했어요!");
+			
+			//	TODO : 성능 개선 (보조 스트림 이용)
 		} catch (FileNotFoundException e) {
 			System.err.println("파일을 찾을 수 없습니다");
 		} catch (IOException e) {
