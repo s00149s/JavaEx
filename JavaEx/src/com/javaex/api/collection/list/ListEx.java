@@ -32,7 +32,7 @@ public class ListEx {
 		//	객체의 삭제 : 주어진 객체 값으로 삭제
 		lst.remove("Python");
 		System.out.println(lst);
-		
+			
 		//	TODO: 루프
 		
 		//	비워 봅시다:

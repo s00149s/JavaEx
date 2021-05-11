@@ -46,6 +46,8 @@ public class VertorEx {
 		//	TODO : Loop 개선
 		
 		
+		
+		
 		//	버퍼 비우기
 		v.clear();
 		System.out.println("v : " + v);
