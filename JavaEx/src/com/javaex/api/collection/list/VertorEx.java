@@ -6,8 +6,12 @@ public class VertorEx {
 
 	public static void main(String[] args) {
 		// 벡터의 선언
-		Vector v = new Vector();
-		System.out.println("Size : " + v.size() + ", Capacity : " + v.capacity());
+		Vector<Integer>v = new Vector<>();
+		
+		System.out.println("vector:" + v);
+		
+		System.out.printf("size: %d, capacity: %d%n", 
+				v.size(), v.capacity());
 		
 		//	1부터 10까지의 값을 담아봅시다
 		for (int i = 1; i<=10; i++) {
@@ -15,6 +19,8 @@ public class VertorEx {
 			v.addElement(i);
 			//	= v.addElement(Integer.valueOf(i))
 		}
+		
+		
 		System.out.println("Size : " + v.size() + ", Capacity : " + v.capacity());
 		
 		v.addElement(11);	//	혀용량 자동 증가
