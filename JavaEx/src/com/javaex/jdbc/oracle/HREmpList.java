@@ -9,17 +9,10 @@ public class HREmpList {
 		Statement stmt = null;
 		ResultSet rs = null;
 		
-		try {
-			conn = DBconfig.getConnection();
-			
-			String sql = "SELECT first_name || ' ' || last_name as employee_name," 
-						+ " first_name as manager_name"
-						+ " FROM employees emp, employees man"
-						+ " WHERE emp.manager_id = man.employee_id"
-			
+	
 			
 		}
 
 	}
 
-}
+
